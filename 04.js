@@ -13,6 +13,22 @@ function numeroSimetrico(num) {
   // numeroSimetrico(11711) devuelve true
 
   // Tu código:
+  String.prototype.reverse = function(){
+    const stringReverse = [];
+    stringSplit = this.split('');
+    for(let i=stringSplit.length-1; i>=0 ; i--) {
+      letterI = stringSplit.pop();
+      stringReverse.push(letterI);
+    };
+    return stringReverse.join('');
+  };
+
+  const number = num.toString();
+  if(number === number.reverse()) {
+    return true;
+  } else {
+    return false;
+  }
 
 }
 

@@ -11,8 +11,18 @@ function stringMasLarga(strings) {
   // stringMasLarga(['hi', 'hello', 'ni hao', 'guten tag']); debe retornar 'guten tag'
   // stringMasLarga(['JavaScript', 'HTML', 'CSS']); debe retornar 'JavaScript'
 
-  // Tu código aca
-}
+  // Tu código aca:
+  for(let i=0; i<strings.length -1; i++) {
+    for(let j=0; j<strings.length -i -1; j++) {
+      if(strings[j].length > strings[j+1].length) {
+        auxiliar = strings[j];
+        strings[j] = strings[j+1];
+        strings[j+1] = auxiliar;
+      }
+    }
+    };
+    return strings[strings.length-1]
+  };
 
 // No modifiques nada debajo de esta linea //
 
